@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mathlibft.h"
+#include "libmathft.h"
 
 /*
 ** Creates a new scaling matrix which will scale a matrix or vector of all

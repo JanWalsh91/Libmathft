@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mathlibft.h"
+#include "libmathft.h"
 
 /*
 ** Scales a vector by the vector/point i.

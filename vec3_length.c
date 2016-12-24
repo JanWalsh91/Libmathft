@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mathlibft.h"
+#include "libmathft.h"
 
 /*
 ** Returns the length of the vector.

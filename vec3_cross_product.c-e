@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libmathft.h"
+#include "mathlibft.h"
 
 /*
 ** Returns the cross product of two vectors.

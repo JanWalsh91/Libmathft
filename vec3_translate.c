@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mathlibft.h"
+#include "libmathft.h"
 
 /*
 ** Translates a vector or point by vector i.

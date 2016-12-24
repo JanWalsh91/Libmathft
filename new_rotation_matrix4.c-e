@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libmathft.h"
+#include "mathlibft.h"
 
 static t_matrix4	m_rot_x(float angle);
 static t_matrix4	m_rot_y(float angle);

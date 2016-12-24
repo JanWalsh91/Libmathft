@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_to_radian.c                                     :+:      :+:    :+:   */
+/*   matrix4_translation.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/23 17:30:27 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/12/23 17:31:29 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/12/23 17:18:13 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/12/23 17:18:32 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libmathft.h"
+#include "mathlibft.h"
 
 /*
-** Converts degrees to radians.
+** Combines a matrix and a translation vector.
 */
 
-double	to_radian(double a)
+t_matrix4	matrix4_translation(t_matrix4 m, t_vec3 v)
 {
-	return (a * M_PI / 180);
+	m[0][3] += v.x;
+	m[1][3] += v.y;
+	m[2][3] += v.z;
+	return (m);
 }

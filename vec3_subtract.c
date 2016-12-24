@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mathlibft.h"
+#include "libmathft.h"
 
 /*
 ** Subtracts one vector from another.

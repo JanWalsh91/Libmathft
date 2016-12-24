@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_to_radian.c                                     :+:      :+:    :+:   */
+/*   round.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/23 17:30:27 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/12/23 17:31:29 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/12/12 18:44:47 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/12/23 16:53:20 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libmathft.h"
-
 /*
-** Converts degrees to radians.
+** Rounds a float to the nearest integer.
 */
 
-double	to_radian(double a)
+int	ft_round(float i)
 {
-	return (a * M_PI / 180);
+	int	a;
+	int	b;
+
+	a = (int)i;
+	b = (int)(i + 0.5);
+	return ((a == b) ? a : b);
 }

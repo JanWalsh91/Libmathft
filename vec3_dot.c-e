@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libmathft.h"
+#include "mathlibft.h"
 
 /*
 ** The dot product of two vectors relates to the cosine of the angle between

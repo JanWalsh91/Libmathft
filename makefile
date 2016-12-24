@@ -6,7 +6,7 @@
 #    By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2016/12/23 17:36:20 by jwalsh           ###   ########.fr        #
+#    Updated: 2016/12/24 15:35:28 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,9 +29,9 @@ SRC = 	ft_round.c \
 		vec3_product.c
 
 
-NAME = mathlibft.a
+NAME = libmathft.a
 
-HEAD = mathlibft.h
+HEAD = libmathft.h
 
 CC = gcc
 
@@ -57,26 +57,26 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	@$(ECHO) "$(C_MAGENTA)Mathlibft compilation done.$(C_NONE)"
+	@$(ECHO) "$(C_MAGENTA)Libmathft compilation done.$(C_NONE)"
 
 $(OBJ_NAME): libft.h
 
 compile_msg:
-	@$(ECHO) "$(C_MAGENTA)Compiling Mathlibft . . .$(C_NONE)"
+	@$(ECHO) "$(C_MAGENTA)Compiling Libamthft . . .$(C_NONE)"
 
 %.o: %.c
-	@$(CC) $(CFLAGS) -c $< -o $@ -I ./libft.h
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	@rm -f $(OBJ)
-	@$(ECHO) "$(C_MAGENTA)Mathlibft clean done.$(C_NONE)"
+	@$(ECHO) "$(C_MAGENTA)Libmathft clean done.$(C_NONE)"
 
 fclean: clean
 	@rm -f $(NAME)
-	@$(ECHO) "$(C_MAGENTA)Mathlibft fclean done.$(C_NONE)"
+	@$(ECHO) "$(C_MAGENTA)Libmathft fclean done.$(C_NONE)"
 
 re: fclean
 	@$(MAKE) all
 
 .PHONY: clean fclean
-	@$(ECHO) "$(C_MAGENTA)Mathlibft .PHONY done.$(C_NONE)"
+	@$(ECHO) "$(C_MAGENTA)Libmathft .PHONY done.$(C_NONE)"

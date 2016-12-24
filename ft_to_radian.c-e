@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libmathft.h"
+#include "mathlibft.h"
 
 /*
 ** Converts degrees to radians.

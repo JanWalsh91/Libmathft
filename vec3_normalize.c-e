@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_to_radian.c                                     :+:      :+:    :+:   */
+/*   vec3_normalize.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/23 17:30:27 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/12/23 17:31:29 by jwalsh           ###   ########.fr       */
+/*   Created: 2016/12/23 17:25:38 by jwalsh            #+#    #+#             */
+/*   Updated: 2016/12/23 17:26:58 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libmathft.h"
+#include "mathlibft.h"
 
 /*
-** Converts degrees to radians.
+** Converts the vector to a unit vector.
 */
 
-double	to_radian(double a)
+t_vec3	vec_normalize(t_vec3 vec)
 {
-	return (a * M_PI / 180);
+	float len;
+
+	len = vec3_length(vec);
+	if (len > 0)
+	{
+		vec.x *= 1/len;
+		vec.y *= 1/len;
+		vec.z *= 1/len;
+	}
+	return (vec);
 }
