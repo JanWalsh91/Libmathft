@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/23 17:19:44 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/12/23 17:21:16 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/12/23 19:43:58 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static t_matrix4	m_rot_z(float angle);
 ** Creates a new rotation matrix of angle 'angle' around axis 'axis'
 */
 
-t_matrix4	new_rotation_matrix(float angle, char axis)
+t_matrix4	new_rotation_matrix4(float angle, char axis)
 {
 	if (axis == 'x' || axis == 'X')
 		return (m_rot_x(angle));
