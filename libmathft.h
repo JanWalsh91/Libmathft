@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/24 15:36:18 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/12/24 15:36:23 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/12/26 14:03:52 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 
 # include <math.h>
 # include <stdlib.h>
+
+typedef struct	s_pt2
+{
+	int			x;
+	int			y;
+}				t_pt2;
 
 typedef struct	s_vec2
 {
