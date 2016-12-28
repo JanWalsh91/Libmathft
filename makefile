@@ -6,7 +6,7 @@
 #    By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2016/12/24 15:35:28 by jwalsh           ###   ########.fr        #
+#    Updated: 2016/12/28 11:17:28 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,8 +58,6 @@ $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	@$(ECHO) "$(C_MAGENTA)Libmathft compilation done.$(C_NONE)"
-
-$(OBJ_NAME): libft.h
 
 compile_msg:
 	@$(ECHO) "$(C_MAGENTA)Compiling Libamthft . . .$(C_NONE)"
