@@ -6,7 +6,7 @@
 #    By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2016/12/28 11:17:28 by jwalsh           ###   ########.fr        #
+#    Updated: 2016/12/28 14:05:22 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,24 +57,24 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	@$(ECHO) "$(C_MAGENTA)Libmathft compilation done.$(C_NONE)"
+	@$(ECHO) "$(C_CYAN)Libmathft compilation done.$(C_NONE)"
 
 compile_msg:
-	@$(ECHO) "$(C_MAGENTA)Compiling Libamthft . . .$(C_NONE)"
+	@$(ECHO) "$(C_CYAN)Compiling Libamthft . . .$(C_NONE)"
 
 %.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	@rm -f $(OBJ)
-	@$(ECHO) "$(C_MAGENTA)Libmathft clean done.$(C_NONE)"
+	@$(ECHO) "$(C_CYAN)Libmathft clean done.$(C_NONE)"
 
 fclean: clean
 	@rm -f $(NAME)
-	@$(ECHO) "$(C_MAGENTA)Libmathft fclean done.$(C_NONE)"
+	@$(ECHO) "$(C_CYAN)Libmathft fclean done.$(C_NONE)"
 
 re: fclean
 	@$(MAKE) all
 
 .PHONY: clean fclean
-	@$(ECHO) "$(C_MAGENTA)Libmathft .PHONY done.$(C_NONE)"
+	@$(ECHO) "$(C_CYAN)Libmathft .PHONY done.$(C_NONE)"
