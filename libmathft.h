@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/24 15:36:18 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/12/27 14:58:11 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/21 15:31:41 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,12 @@ typedef struct	s_vec3
 
 typedef float	**t_matrix4;
 
+typedef struct s_complex
+{
+	double	r;
+	double	i;
+}				t_complex;
+
 double			to_radian(double a);
 int				ft_round(float i);
 int				ft_rgb_mix(int *colors, int n);
@@ -66,5 +72,14 @@ t_matrix4		new_scaling_matrix4(float i);
 t_matrix4		matrix4_product(t_matrix4 m1, t_matrix4 m2);
 t_matrix4		new_rotation_matrix4(float angle, char axis);
 t_matrix4		matrix4_translation(t_matrix4 m, t_vec3 v);
+
+/*
+** Complex number functions
+*/
+
+t_complex		c_add(t_complex x, t_complex y);
+t_complex		c_add_float(t_complex x, double y, double z);
+t_complex		c_product(t_complex x, t_complex y);
+double			c_modulus(t_complex x);
 
 #endif
