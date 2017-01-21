@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/21 15:10:15 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/21 15:10:28 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/21 15:34:59 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 ** Returns n to the power of p.
 */
 
-#include "libft.h"
+#include "libmathft.h"
 
 long	ft_power(int n, int p)
 {

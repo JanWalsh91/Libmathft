@@ -6,11 +6,13 @@
 #    By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2017/01/21 15:31:35 by jwalsh           ###   ########.fr        #
+#    Updated: 2017/01/21 15:35:15 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = 	ft_round.c \
+SRC = 	ft_abs.c \
+		ft_power.c \
+		ft_round.c \
 		ft_rgb_mix.c \
 		ft_to_radian.c \
 		new_matrix4.c \

@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/24 15:36:18 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/21 15:31:41 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/21 15:34:56 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ typedef struct s_complex
 	double	i;
 }				t_complex;
 
+unsigned long	ft_abs(long n);
+long			ft_power(int n, int p);
 double			to_radian(double a);
 int				ft_round(float i);
 int				ft_rgb_mix(int *colors, int n);
