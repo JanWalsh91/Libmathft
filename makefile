@@ -6,7 +6,7 @@
 #    By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2017/01/31 16:57:52 by jwalsh           ###   ########.fr        #
+#    Updated: 2017/01/31 17:02:42 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,9 @@ SRC = 	ft_abs.c \
 		c_add.c \
 		c_add_float.c \
 		c_abs.c \
+		c_divide.c \
 		c_product.c \
+		c_minus.c \
 		c_modulus.c \
 		c_sin.c \
 		c_sphere.c \
