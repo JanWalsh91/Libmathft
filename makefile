@@ -6,7 +6,7 @@
 #    By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2017/01/31 16:26:04 by jwalsh           ###   ########.fr        #
+#    Updated: 2017/01/31 16:57:52 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ SRC = 	ft_abs.c \
 		vec3_product.c \
 		c_add.c \
 		c_add_float.c \
+		c_abs.c \
 		c_product.c \
 		c_modulus.c \
 		c_sin.c \
