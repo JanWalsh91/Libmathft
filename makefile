@@ -6,7 +6,7 @@
 #    By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2017/01/21 15:35:15 by jwalsh           ###   ########.fr        #
+#    Updated: 2017/01/31 16:26:04 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,12 @@ SRC = 	ft_abs.c \
 		c_add.c \
 		c_add_float.c \
 		c_product.c \
-		c_modulus.c
+		c_modulus.c \
+		c_sin.c \
+		c_sphere.c \
+		c_horseshoe.c \
+		c_swirl.c \
+		c_polar.c
 
 
 NAME = libmathft.a

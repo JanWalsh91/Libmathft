@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/24 15:36:18 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/21 15:34:56 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/01/31 16:26:52 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,10 @@ t_complex		c_add(t_complex x, t_complex y);
 t_complex		c_add_float(t_complex x, double y, double z);
 t_complex		c_product(t_complex x, t_complex y);
 double			c_modulus(t_complex x);
+t_complex		c_sin(t_complex x);
+t_complex		c_sphere(t_complex x);
+t_complex		c_horseshoe(t_complex x);
+t_complex		c_swirl(t_complex x);
+t_complex		c_polar(t_complex x);
 
 #endif
