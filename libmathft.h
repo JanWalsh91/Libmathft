@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/24 15:36:18 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/01/31 17:10:58 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/02/01 11:20:35 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ typedef struct	s_vec3
 
 typedef float	**t_matrix4;
 
-typedef struct s_complex
+typedef struct	s_complex
 {
 	double	r;
 	double	i;
