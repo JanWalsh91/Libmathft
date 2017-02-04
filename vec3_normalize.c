@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/23 17:25:38 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/12/27 14:57:03 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/02/04 16:44:38 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** Converts the vector to a unit vector.
 */
 
-t_vec3	vec_normalize(t_vec3 vec)
+t_vec3	vec3_normalize(t_vec3 vec)
 {
 	float len;
 
