@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/23 17:24:39 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/12/23 17:24:43 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/02/05 16:47:24 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** Returns the length of the vector.
 */
 
-float	vec_length(t_vec3 v)
+float	vec3_length(t_vec3 v)
 {
 	return (sqrt(vec3_dot(v, v)));
 }
