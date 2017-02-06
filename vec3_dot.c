@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/23 17:27:37 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/04 16:44:44 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/02/06 13:35:45 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ float	vec3_dot(t_vec3 vec1, t_vec3 vec2)
 {
 	return (vec1.x * vec2.x +
 			vec1.y * vec2.y +
-			vec1.z * vec2.y);
+			vec1.z * vec2.z);
 }
