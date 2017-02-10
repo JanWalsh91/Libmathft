@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+         #
+#    By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2017/02/05 16:47:29 by jwalsh           ###   ########.fr        #
+#    Updated: 2017/02/10 11:34:20 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRC = 	ft_abs.c \
 		new_rotation_matrix4.c \
 		matrix4_product.c \
 		vec3_matrix4_product.c \
+		pvec3_matrix4_product.c \
 		matrix4_translation.c \
 		vec3_dot.c \
 		vec3_length.c \

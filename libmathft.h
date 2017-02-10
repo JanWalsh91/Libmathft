@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libmathft.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/24 15:36:18 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/05 16:47:36 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/02/10 11:33:09 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,8 @@ t_vec3			vec3_subtract(t_vec3 vec1, t_vec3 vec2);
 t_vec3			vec3_product(t_vec3 vec1, float i);
 t_vec3			vec3_translate(t_vec3 vec, t_vec3 i);
 t_vec3			vec3_scale(t_vec3 vec, t_vec3 i);
-t_vec3			vec3_matrix4_product(t_vec3 p, t_matrix4 m);
+t_vec3			vec3_matrix4_product(t_vec3 v, t_matrix4 m);
+t_vec3			pvec3_matrix4_product(t_vec3 p, t_matrix4 m);
 
 /*
 ** 4 x 4 Matrix functions

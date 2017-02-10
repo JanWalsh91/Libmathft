@@ -13,7 +13,7 @@
 #include "libmathft.h"
 
 /*
-** Returns the product of  matrix m and vector v.
+** Returns the product of matrix m and vector v.
 */
 
 t_vec3	vec3_matrix4_product(t_vec3 v, t_matrix4 m)
