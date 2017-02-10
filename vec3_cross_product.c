@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   vec3_cross_product.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/23 17:28:32 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/12/23 17:29:54 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/02/10 14:04:29 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 ** This is useful to create a Cartesian Coordinate system.
 */
 
-t_vec3	vec_cross_product(t_vec3 vec1, t_vec3 vec2)
+t_vec3	vec3_cross_product(t_vec3 vec1, t_vec3 vec2)
 {
 	t_vec3 vec;
 
