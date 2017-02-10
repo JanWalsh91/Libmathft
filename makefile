@@ -6,7 +6,7 @@
 #    By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2017/02/10 11:34:20 by jwalsh           ###   ########.fr        #
+#    Updated: 2017/02/10 13:56:22 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRC = 	ft_abs.c \
 		vec3_matrix4_product.c \
 		pvec3_matrix4_product.c \
 		matrix4_translation.c \
+		vec3_to_rot_matrix.c \
 		vec3_dot.c \
 		vec3_length.c \
 		vec3_normalize.c \

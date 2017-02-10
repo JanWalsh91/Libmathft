@@ -6,7 +6,7 @@
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/24 15:36:18 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/10 11:33:09 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/02/10 13:56:10 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ t_matrix4		new_scaling_matrix4(float i);
 t_matrix4		matrix4_product(t_matrix4 m1, t_matrix4 m2);
 t_matrix4		new_rotation_matrix4(float angle, char axis);
 t_matrix4		matrix4_translation(t_matrix4 m, t_vec3 v);
+t_matrix4		vec3_to_rot_matrix(t_vec3 v1, t_vec3 v2);
 
 /*
 ** Complex number functions
