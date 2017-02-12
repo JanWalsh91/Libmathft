@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   vec3_length.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/23 17:24:39 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/05 16:47:24 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/02/12 15:17:52 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** Returns the length of the vector.
 */
 
-float	vec3_length(t_vec3 v)
+double	vec3_length(t_vec3 v)
 {
 	return (sqrt(vec3_dot(v, v)));
 }

@@ -6,7 +6,7 @@
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/24 15:36:18 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/10 13:56:10 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/02/12 15:17:58 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,15 @@ typedef struct	s_dpt2
 
 typedef struct	s_vec2
 {
-	float		x;
-	float		y;
+	double		x;
+	double		y;
 }				t_vec2;
 
 typedef struct	s_vec3
 {
-	float		x;
-	float		y;
-	float		z;
+	double		x;
+	double		y;
+	double		z;
 }				t_vec3;
 
 typedef float	**t_matrix4;
@@ -59,8 +59,8 @@ int				ft_rgb_mix(int *colors, int n);
 ** 3 x 3 Vector functions
 */
 
-float			vec3_dot(t_vec3 vec1, t_vec3 vec2);
-float			vec3_length(t_vec3 vec);
+double			vec3_dot(t_vec3 vec1, t_vec3 vec2);
+double			vec3_length(t_vec3 vec);
 t_vec3			vec3_normalize(t_vec3 vec);
 t_vec3			vec3_cross_product(t_vec3 vec1, t_vec3 vec2);
 t_vec3			vec3_add(t_vec3 vec1, t_vec3 vec2);
