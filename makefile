@@ -6,7 +6,7 @@
 #    By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2017/02/13 16:34:30 by jwalsh           ###   ########.fr        #
+#    Updated: 2017/02/13 16:52:12 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ SRC = 	ft_abs.c \
 		matrix4_product.c \
 		matrix4_scale.c \
 		matrix4_add.c \
+		get_rodrigues_matrix.c \
 		vec3_matrix4_product.c \
 		pvec3_matrix4_product.c \
 		matrix4_translation.c \
