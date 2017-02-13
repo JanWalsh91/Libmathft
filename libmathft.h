@@ -6,7 +6,7 @@
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/24 15:36:18 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/12 15:17:58 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/02/13 14:19:25 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ long			ft_power(int n, int p);
 double			to_radian(double a);
 int				ft_round(float i);
 int				ft_rgb_mix(int *colors, int n);
+int				vece3_nan(t_vec3 *v);
 
 /*
 ** 3 x 3 Vector functions
