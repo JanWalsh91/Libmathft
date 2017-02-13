@@ -6,7 +6,7 @@
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/13 15:06:30 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/13 16:48:56 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/02/13 16:53:31 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ t_matrix4   get_rodrigues_matrix(t_vec3 a, t_vec3 b)
     m = matrix4_add(matrix4_scale(n, sin(angle)), m);
     m = matrix4_add(m, matrix4_scale(matrix4_product(n, n), 1 - cos(angle)));
     i = -1;
-    while (i < 3)
+    while (++i < 3)
     {
         m[3][i] = 0;
         m[i][3] = 0;
