@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vec3_cross_product.c                               :+:      :+:    :+:   */
+/*   matrix4_add.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/23 17:28:32 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/13 16:15:46 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/02/13 16:31:16 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/02/13 16:34:15 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libmathft.h"
 
 /*
-** Returns the cross product of two vectors.
-** The cross product of two vectors results in a vector orthogonal to the
-** plane produced by those two vectors.
-** This is useful to create a Cartesian Coordinate system.
+**
 */
 
-t_vec3	vec3_cross_product(t_vec3 vec1, t_vec3 vec2)
-{
-	t_vec3 vec;
+t_matrix4   matrix4_add(t_matrix4 m1, t_matrix4 m2)
+{ 
+    int y;
+    int x;
+    t_matrix4 m;
 
-	vec.x = vec1.y * vec2.z - vec1.z * vec2.y;
-	vec.y = vec1.z * vec2.x - vec1.x * vec2.z;
-	vec.z = vec1.x * vec2.y - vec1.y * vec2.x;
-	return (vec);
+    m = new_identity_matrix4();
+    y = -1;
+    while (++y < 3)
+    {
+        x = -1;
+        while (++x < 3)
+            m[y][x] = m1[y][x] + m2[y][x];
+    }
+    return (m);
 }
