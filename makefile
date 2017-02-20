@@ -6,63 +6,71 @@
 #    By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2017/02/15 15:50:56 by jwalsh           ###   ########.fr        #
+#    Updated: 2017/02/20 16:56:23 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = 	ft_abs.c \
-		ft_power.c \
-		ft_round.c \
-		ft_rgb_mix.c \
-		ft_to_radian.c \
-		new_matrix4.c \
-		new_identity_matrix4.c \
-		new_scaling_matrix4.c \
-		new_rotation_matrix4.c \
-		matrix4_product.c \
-		matrix4_scale.c \
-		matrix4_add.c \
-		matrix4_inverse3.c \
-		get_rodrigues_matrix.c \
-		vec3_matrix4_product.c \
-		pvec3_matrix4_product.c \
-		matrix4_translation.c \
-		vec3_to_rot_matrix.c \
-		vec3_dot.c \
-		vec3_length.c \
-		vec3_normalize.c \
-		vec3_cross_product.c \
-		vec3_add.c \
-		vec3_subtract.c \
-		vec3_product.c \
-		vec3_isnan.c \
-		c_add.c \
-		c_add_float.c \
-		c_abs.c \
-		c_divide.c \
-		c_product.c \
-		c_product_double.c \
-		c_minus.c \
-		c_minus_double.c \
-		c_modulus.c \
-		c_sin.c \
-		c_sphere.c \
-		c_horseshoe.c \
-		c_swirl.c \
-		c_polar.c
-
-
 NAME = libmathft.a
+
+COMPLEX_NUMBERS = c_add \
+		c_add_float \
+		c_abs \
+		c_divide \
+		c_product \
+		c_product_double \
+		c_minus \
+		c_minus_double \
+		c_modulus \
+		c_sin \
+		c_sphere \
+		c_horseshoe \
+		c_swirl \
+		c_polar
+
+VECTORS_AND_MATRICES = new_matrix4 \
+		new_identity_matrix4 \
+		new_scaling_matrix4 \
+		new_rotation_matrix4 \
+		matrix4_product \
+		matrix4_scale \
+		matrix4_add \
+		matrix4_inverse3 \
+		get_rodrigues_matrix \
+		vec3_matrix4_product \
+		pvec3_matrix4_product \
+		matrix4_translation \
+		vec3_to_rot_matrix \
+		vec3_dot \
+		vec3_length \
+		vec3_normalize \
+		vec3_cross_product \
+		vec3_add \
+		vec3_subtract \
+		vec3_product \
+		vec3_isnan
+
+MISC = 	ft_abs \
+		ft_power \
+		ft_round \
+		ft_rgb_mix \
+		ft_to_radian
+
+OBJ_DIR = obj
+
+EXT = .c
+
+SRC_COMPLEX_NUMBERS = $(addsuffix $(EXT), $(COMPLEX_NUMBERS))
+SRC_VECTORS_AND_MATRICES = $(addsuffix $(EXT), $(VECTORS_AND_MATRICES))
+SRC_MISC = $(addsuffix $(EXT), $(MISC))
+OBJ_COMPLEX_NUMBERS = $(addprefix $(OBJ_DIR)/, $(SRC_COMPLEX_NUMBERS:.c=.o))
+OBJ_VECTORS_AND_MATRICES = $(addprefix $(OBJ_DIR)/, $(SRC_VECTORS_AND_MATRICES:.c=.o))
+OBJ_MISC = $(addprefix $(OBJ_DIR)/, $(SRC_MISC:.c=.o))
 
 HEAD = libmathft.h
 
 CC = gcc
 
 CFLAGS = -Wall -Werror -Wextra
-
-OBJ = $(SRC:.c=.o)
-
-ECHO = echo
 
 C_NONE = \033[0m
 C_BOLD = \033[1m
@@ -77,27 +85,32 @@ C_GRAY = \033[37m
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	@ar rc $(NAME) $(OBJ)
-	@ranlib $(NAME)
-	@$(ECHO) "$(C_CYAN)Libmathft compilation done.$(C_NONE)"
+$(NAME): $(OBJ_COMPLEX_NUMBERS) $(OBJ_VECTORS_AND_MATRICES) $(OBJ_MISC) 
+	@ar rcs $(NAME) $(OBJ_COMPLEX_NUMBERS) $(OBJ_VECTORS_AND_MATRICES) $(OBJ_MISC)
+	@echo "$(C_CYAN)Libmathft compilation done.$(C_NONE)"
 
-compile_msg:
-	@$(ECHO) "$(C_CYAN)Compiling Libamthft . . .$(C_NONE)"
+$(OBJ_DIR)/%.o : ./complex_numbers/%.c
+	@/bin/mkdir -p $(OBJ_DIR)
+	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<
 
-%.o: %.c
-	@$(CC) $(CFLAGS) -c $< -o $@
+$(OBJ_DIR)/%.o : ./vectors_and_matrices/%.c
+	@/bin/mkdir -p $(OBJ_DIR)
+	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<
+
+$(OBJ_DIR)/%.o : ./misc/%.c
+	@/bin/mkdir -p $(OBJ_DIR)
+	@$(CC) $(CFLAGS) -I./inc -c -o $@ $<
 
 clean:
-	@rm -f $(OBJ)
-	@$(ECHO) "$(C_CYAN)Libmathft clean done.$(C_NONE)"
+	@/bin/rm -Rf $(OBJ_DIR)
+	@echo "$(C_CYAN)Libmathft clean done.$(C_NONE)"
 
 fclean: clean
-	@rm -f $(NAME)
-	@$(ECHO) "$(C_CYAN)Libmathft fclean done.$(C_NONE)"
+	@/bin/rm -f $(NAME)
+	@echo "$(C_CYAN)Libmathft fclean done.$(C_NONE)"
 
 re: fclean
 	@$(MAKE) all
 
 .PHONY: clean fclean
-	@$(ECHO) "$(C_CYAN)Libmathft .PHONY done.$(C_NONE)"
+	@echo "$(C_CYAN)Libmathft .PHONY done.$(C_NONE)"
