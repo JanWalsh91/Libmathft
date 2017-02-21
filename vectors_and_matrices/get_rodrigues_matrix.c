@@ -6,11 +6,13 @@
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/13 15:06:30 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/13 17:05:33 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/02/21 12:00:43 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libmathft.h"
+
+//Calculate the roation matrix from vector b to vector a.
 
 t_matrix4   get_rodrigues_matrix(t_vec3 a, t_vec3 b)
 {
