@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   matrix4_product.c                                  :+:      :+:    :+:   */
+/*   m_mult.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/23 17:11:32 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/12/27 14:55:17 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/02/21 13:17:19 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/02/21 13:17:50 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@
 ** Combines two matrices.
 */
 
-t_matrix4	matrix4_product(t_matrix4 m1, t_matrix4 m2)
+t_matrix	m_mult(t_matrix m1, t_matrix m2)
 {
 	int			x;
 	int			y;
-	t_matrix4	m;
+	t_matrix	m;
 
-	m = new_matrix4();
+	m = m_new(); // does this need to be an identity matrix? 
 	y = -1;
 	while (++y < 4)
 	{

@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   new_rotation_matrix4.c                             :+:      :+:    :+:   */
+/*   m_new_rotate.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/23 17:19:44 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/12/27 14:55:48 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/02/21 13:22:02 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/02/21 13:22:31 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libmathft.h"
 
-static t_matrix4	m_rot_x(float angle);
-static t_matrix4	m_rot_y(float angle);
-static t_matrix4	m_rot_z(float angle);
+static t_matrix	m_rot_x(float angle);
+static t_matrix	m_rot_y(float angle);
+static t_matrix	m_rot_z(float angle);
 
 /*
 ** Creates a new rotation matrix of angle 'angle' around axis 'axis'
 */
 
-t_matrix4			new_rotation_matrix4(float angle, char axis)
+t_matrix			m_new_rotate(float angle, char axis)
 {
 	if (axis == 'x' || axis == 'X')
 		return (m_rot_x(angle));
@@ -31,11 +31,11 @@ t_matrix4			new_rotation_matrix4(float angle, char axis)
 	return (0);
 }
 
-static t_matrix4	m_rot_x(float angle)
+static t_matrix	m_rot_x(float angle)
 {
-	t_matrix4	m;
+	t_matrix	m;
 
-	m = new_matrix4();
+	m = m_new();
 	m[0][0] = 1;
 	m[1][1] = cos(to_radian(angle));
 	m[1][2] = sin(to_radian(angle));
@@ -44,11 +44,11 @@ static t_matrix4	m_rot_x(float angle)
 	return (m);
 }
 
-static t_matrix4	m_rot_y(float angle)
+static t_matrix	m_rot_y(float angle)
 {
-	t_matrix4	m;
+	t_matrix	m;
 
-	m = new_matrix4();
+	m = m_new();
 	m[0][0] = cos(to_radian(angle));
 	m[0][2] = -sin(to_radian(angle));
 	m[1][1] = 1;
@@ -57,11 +57,11 @@ static t_matrix4	m_rot_y(float angle)
 	return (m);
 }
 
-static t_matrix4	m_rot_z(float angle)
+static t_matrix	m_rot_z(float angle)
 {
-	t_matrix4	m;
+	t_matrix	m;
 
-	m = new_matrix4();
+	m = m_new();
 	m[0][0] = cos(to_radian(angle));
 	m[0][1] = sin(to_radian(angle));
 	m[1][0] = -sin(to_radian(angle));

@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vec3_add.c                                         :+:      :+:    :+:   */
+/*   m_translate.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/23 17:35:27 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/12/27 14:56:17 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/02/21 13:23:17 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/02/21 14:28:08 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libmathft.h"
 
 /*
-** Add two vectors.
+** Translates a matrix by vector v.  
 */
 
-t_vec3	vec3_add(t_vec3 vec1, t_vec3 vec2)
+t_matrix	m_translate(t_matrix m, t_vec3 v)
 {
-	t_vec3	vec;
-
-	vec.x = vec1.x + vec2.x;
-	vec.y = vec1.y + vec2.y;
-	vec.z = vec1.z + vec2.z;
-	return (vec);
+	m[0][3] += v.x;
+	m[1][3] += v.y;
+	m[2][3] += v.z;
+	return (m);
 }

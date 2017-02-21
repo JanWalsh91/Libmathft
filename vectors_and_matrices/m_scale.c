@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   matrix4_scale.c                                    :+:      :+:    :+:   */
+/*   m_scale.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/13 16:24:38 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/13 16:32:36 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/02/21 14:20:16 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/02/21 14:27:46 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libmathft.h"
 
 /*
-** Scales a matrix.
+** Scales a matrix by i.
 */
 
-t_matrix4   matrix4_scale(t_matrix4 m, double i)
+t_matrix	m_scale(t_matrix m, double i)
 {
-    int  x;
-    int  y;
+    int 	x;
+    int		y;
 
     y = -1;
-    while (++y < 4)
+    while (++y < 4) //3 ? 
     {
-        x = -1;
-        while (++x < 4)
+		x = -1;
+        while (++x < 4) //3 ?
             m[y][x] *= i;
     }
     return (m);

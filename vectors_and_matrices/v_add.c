@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vec3_cross_product.c                               :+:      :+:    :+:   */
+/*   v_add.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/23 17:28:32 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/13 16:15:46 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/02/21 13:24:09 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/02/21 14:28:51 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libmathft.h"
 
 /*
-** Returns the cross product of two vectors.
-** The cross product of two vectors results in a vector orthogonal to the
-** plane produced by those two vectors.
-** This is useful to create a Cartesian Coordinate system.
+** Returns the sum of vec1 and vec2.
 */
 
-t_vec3	vec3_cross_product(t_vec3 vec1, t_vec3 vec2)
+t_vec3	v_add(t_vec3 vec1, t_vec3 vec2)
 {
-	t_vec3 vec;
+	t_vec3	vec;
 
-	vec.x = vec1.y * vec2.z - vec1.z * vec2.y;
-	vec.y = vec1.z * vec2.x - vec1.x * vec2.z;
-	vec.z = vec1.x * vec2.y - vec1.y * vec2.x;
+	vec.x = vec1.x + vec2.x;
+	vec.y = vec1.y + vec2.y;
+	vec.z = vec1.z + vec2.z;
 	return (vec);
 }

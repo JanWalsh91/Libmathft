@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   new_scaling_matrix4.c                              :+:      :+:    :+:   */
+/*   v_new.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/23 17:10:07 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/12/23 17:10:56 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/02/21 14:22:58 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/02/21 14:24:43 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libmathft.h"
 
+
 /*
-** Creates a new scaling matrix which will scale a matrix or vector of all
-** coordinates by i.
+** Creates and returns a new vector with values x, y, and z.
 */
 
-t_matrix4	new_scaling_matrix4(float i)
+t_vec3	v_new(double x, double y, double z)
 {
-	t_matrix4	m;
+	t_vec3	new_v;
 
-	m = new_matrix4();
-	m[0][0] = i;
-	m[1][1] = i;
-	m[2][2] = i;
-	return (m);
+	new_v.x = x;
+	new_v.y = y;
+	new_v.z = z;
+	return (new_v);
 }

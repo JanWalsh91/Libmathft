@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vec3_normalize.c                                   :+:      :+:    :+:   */
+/*   v_scale.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/23 17:25:38 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/04 16:44:38 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/02/21 13:25:08 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/02/21 14:30:01 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libmathft.h"
 
 /*
-** Converts the vector to a unit vector.
+** Scales a vector by i.
 */
 
-t_vec3	vec3_normalize(t_vec3 vec)
+t_vec3	v_scale(t_vec3 v, double i)
 {
-	float len;
+	t_vec3	vec;
 
-	len = vec3_length(vec);
-	if (len > 0)
-	{
-		vec.x *= 1 / len;
-		vec.y *= 1 / len;
-		vec.z *= 1 / len;
-	}
+	vec.x = v.x * i;
+	vec.y = v.y * i;
+	vec.z = v.z * i;
 	return (vec);
 }

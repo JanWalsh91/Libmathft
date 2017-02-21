@@ -1,40 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_rodrigues_matrix.c                             :+:      :+:    :+:   */
+/*   m_new_rodriguez.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/13 15:06:30 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/21 12:00:43 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/02/21 13:18:18 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/02/21 14:26:17 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libmathft.h"
 
-//Calculate the roation matrix from vector b to vector a.
+/*
+** Calculates and returns the roation matrix from vector b to vector a.
+*/
 
-t_matrix4   get_rodrigues_matrix(t_vec3 a, t_vec3 b)
+t_matrix   m_new_rodriguez(t_vec3 a, t_vec3 b)
 {
-    t_matrix4   m;
-    t_matrix4   n;
-    t_vec3      v;  
-    double      angle;
-    int         i;
+    t_matrix	m;
+    t_matrix	n;
+    t_vec3		v;  
+    double		angle;
+    int			i;
 
     //calculate the vector orthgonal to a and b around which id the rotation. 
-    v = vec3_normalize(vec3_cross_product(a, b));
-    angle = acos(vec3_dot(a, b) / ((vec3_length(a) * vec3_length(b))));
-    n = new_identity_matrix4();
+    v = v_norm(v_cross(a, b));
+    angle = acos(v_dot(a, b) / ((v_length(a) * v_length(b))));
+    n = m_new_identity();
     n[1][0] = v.z;
     n[2][0] = -v.y;
     n[0][1] = -v.z;
     n[2][1] = v.x;
     n[0][2] = v.y;
     n[1][2] = -v.x;
-    m = new_identity_matrix4();
-    m = matrix4_add(matrix4_scale(n, sin(angle)), m);
-    m = matrix4_add(m, matrix4_scale(matrix4_product(n, n), 1 - cos(angle)));
+    m = m_new_identity();
+    m = m_add(m_scale(n, sin(angle)), m);
+    m = m_add(m, m_scale(m_mult(n, n), 1 - cos(angle)));
     i = -1;
     while (++i < 3)
     {

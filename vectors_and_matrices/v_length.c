@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vec3_product.c                                     :+:      :+:    :+:   */
+/*   v_length.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/23 17:38:13 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/12/23 17:38:51 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/02/21 13:24:51 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/02/21 13:24:55 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libmathft.h"
 
 /*
-** Scales a vector by i.
+** Returns the length of the vector.
 */
 
-t_vec3	vec3_product(t_vec3 vec1, float i)
+double	v_length(t_vec3 v)
 {
-	t_vec3	vec;
-
-	vec.x = vec1.x * i;
-	vec.y = vec1.y * i;
-	vec.z = vec1.z * i;
-	return (vec);
+	return (sqrt(v_dot(v, v)));
 }

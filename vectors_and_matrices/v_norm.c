@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vec3_translate.c                                   :+:      :+:    :+:   */
+/*   v_norm.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/23 17:40:13 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/12/27 14:58:24 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/02/21 13:16:25 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/02/21 14:29:40 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libmathft.h"
 
 /*
-** Translates a vector or point by vector i.
+** Returns the normal of vector vec.
 */
 
-t_vec3	vec3_translate(t_vec3 vec, t_vec3 i)
+t_vec3	v_norm(t_vec3 v)
 {
-	vec.x *= i.x;
-	vec.y *= i.y;
-	vec.z *= i.z;
-	return (vec);
+	double	len;
+
+	len = v_length(v);
+	if (len > 0)
+	{
+		v.x *= 1 / len;
+		v.y *= 1 / len;
+		v.z *= 1 / len;
+	}
+	return (v);
 }

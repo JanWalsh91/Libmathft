@@ -6,7 +6,7 @@
 #    By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2017/02/20 16:56:23 by jwalsh           ###   ########.fr        #
+#    Updated: 2017/02/21 13:23:07 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,27 +27,29 @@ COMPLEX_NUMBERS = c_add \
 		c_swirl \
 		c_polar
 
-VECTORS_AND_MATRICES = new_matrix4 \
-		new_identity_matrix4 \
-		new_scaling_matrix4 \
-		new_rotation_matrix4 \
-		matrix4_product \
-		matrix4_scale \
-		matrix4_add \
-		matrix4_inverse3 \
-		get_rodrigues_matrix \
-		vec3_matrix4_product \
-		pvec3_matrix4_product \
-		matrix4_translation \
-		vec3_to_rot_matrix \
-		vec3_dot \
-		vec3_length \
-		vec3_normalize \
-		vec3_cross_product \
-		vec3_add \
-		vec3_subtract \
-		vec3_product \
-		vec3_isnan
+VECTORS_AND_MATRICES = m_new \
+		m_new_identity \
+		m_new_scale \
+		m_new_rotate \
+		m_new_rodriguez \
+		m_translate \
+		m_v_mult \
+		m_p_mult \
+		m_mult \
+		m_add \
+		m_scale \
+		m_inverse \
+		v_new \
+		v_to_rot_matrix \
+		v_dot \
+		v_length \
+		v_norm \
+		v_cross \
+		v_add \
+		v_sub \
+		v_mult \
+		v_scale \
+		v_isnan
 
 MISC = 	ft_abs \
 		ft_power \

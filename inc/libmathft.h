@@ -6,7 +6,7 @@
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/24 15:36:18 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/15 14:52:02 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/02/21 14:25:02 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,6 @@ typedef struct	s_dpt2
 	double		y;
 }				t_dpt2;
 
-typedef struct	s_vec2
-{
-	double		x;
-	double		y;
-}				t_vec2;
-
 typedef struct	s_vec3
 {
 	double		x;
@@ -41,7 +35,7 @@ typedef struct	s_vec3
 	double		z;
 }				t_vec3;
 
-typedef float	**t_matrix4;
+typedef double	**t_matrix;
 
 typedef struct	s_complex
 {
@@ -54,39 +48,38 @@ long			ft_power(int n, int p);
 double			to_radian(double a);
 int				ft_round(float i);
 int				ft_rgb_mix(int *colors, int n);
-int				vec3_isnan(t_vec3 v);
 
 /*
 ** 3 x 3 Vector functions
 */
 
-double			vec3_dot(t_vec3 vec1, t_vec3 vec2);
-double			vec3_length(t_vec3 vec);
-t_vec3			vec3_normalize(t_vec3 vec);
-t_vec3			vec3_cross_product(t_vec3 vec1, t_vec3 vec2);
-t_vec3			vec3_add(t_vec3 vec1, t_vec3 vec2);
-t_vec3			vec3_subtract(t_vec3 vec1, t_vec3 vec2);
-t_vec3			vec3_product(t_vec3 vec1, float i);
-t_vec3			vec3_translate(t_vec3 vec, t_vec3 i);
-t_vec3			vec3_scale(t_vec3 vec, t_vec3 i);
-t_vec3			vec3_matrix4_product(t_vec3 v, t_matrix4 m);
-t_vec3			pvec3_matrix4_product(t_vec3 p, t_matrix4 m);
+t_vec3			v_add(t_vec3 vec1, t_vec3 vec2);
+t_vec3			v_cross(t_vec3 vec1, t_vec3 vec2);
+double			v_dot(t_vec3 vec1, t_vec3 vec2);
+int				v_isnan(t_vec3 v);
+double			v_length(t_vec3 vec);
+t_vec3			v_mult(t_vec3 vec, t_vec3 i);
+t_vec3			v_new(double x, double y, double z);
+t_vec3			v_norm(t_vec3 vec);
+t_vec3			v_scale(t_vec3 vec1, double i);
+t_vec3			v_sub(t_vec3 vec1, t_vec3 vec2);
 
 /*
 ** 4 x 4 Matrix functions
 */
 
-t_matrix4		new_matrix4(void);
-t_matrix4		new_identity_matrix4(void);
-t_matrix4		new_scaling_matrix4(float i);
-t_matrix4		matrix4_product(t_matrix4 m1, t_matrix4 m2);
-t_matrix4		new_rotation_matrix4(float angle, char axis);
-t_matrix4		matrix4_translation(t_matrix4 m, t_vec3 v);
-t_matrix4		vec3_to_rot_matrix(t_vec3 v1, t_vec3 v2);
-t_matrix4  		matrix4_scale(t_matrix4 m, double i);
-t_matrix4   	matrix4_add(t_matrix4 m1, t_matrix4 m2);
-t_matrix4		matrix4_inverse(t_matrix4 m);
-t_matrix4   	get_rodrigues_matrix(t_vec3 a, t_vec3 b);
+t_matrix   		m_add(t_matrix m1, t_matrix m2);
+t_matrix		m_inverse(t_matrix m);
+t_matrix		m_mult(t_matrix m1, t_matrix m2);
+t_matrix		m_new_identity(void);
+t_matrix  		m_new_rodriguez(t_vec3 a, t_vec3 b);
+t_matrix		m_new_rotate(float angle, char axis);
+t_matrix		m_new_scale(double i);
+t_matrix		m_new(void);
+t_vec3			m_p_mult(t_vec3 p, t_matrix m);
+t_matrix		m_scale(t_matrix m, double i);
+t_matrix		m_translate(t_matrix m, t_vec3 v);
+t_vec3			m_v_mult(t_vec3 v, t_matrix m);
 
 /*
 ** Complex number functions

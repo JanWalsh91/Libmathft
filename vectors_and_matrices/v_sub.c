@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vec3_scale.c                                       :+:      :+:    :+:   */
+/*   v_sub.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/23 17:41:01 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/12/23 17:44:43 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/02/21 13:25:19 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/02/21 14:30:20 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libmathft.h"
 
 /*
-** Scales a vector by the vector/point i.
+** Subtracts vec2 from vec1. 
 */
 
-t_vec3	vec_scale(t_vec3 vec, t_vec3 i)
+t_vec3	v_sub(t_vec3 vec1, t_vec3 vec2)
 {
-	vec.x *= i.x;
-	vec.y *= i.y;
-	vec.z *= i.z;
+	t_vec3	vec;
+
+	vec.x = vec1.x - vec2.x;
+	vec.y = vec1.y - vec2.y;
+	vec.z = vec1.z - vec2.z;
 	return (vec);
 }

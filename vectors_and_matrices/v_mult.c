@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   matrix4_translation.c                              :+:      :+:    :+:   */
+/*   v_mult.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/23 17:18:13 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/12/23 17:18:32 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/02/21 13:27:55 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/02/21 13:28:38 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libmathft.h"
 
 /*
-** Combines a matrix and a translation vector.
+** Multiplies vector vec by vector i.
 */
 
-t_matrix4	matrix4_translation(t_matrix4 m, t_vec3 v)
+t_vec3	v_mult(t_vec3 vec, t_vec3 i)
 {
-	m[0][3] += v.x;
-	m[1][3] += v.y;
-	m[2][3] += v.z;
-	return (m);
+	vec.x *= i.x;
+	vec.y *= i.y;
+	vec.z *= i.z;
+	return (vec);
 }

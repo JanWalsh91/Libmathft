@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vec3_to_rot_matrix.c                               :+:      :+:    :+:   */
+/*   v_to_rot_matrix.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/10 13:47:18 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/21 12:04:59 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/02/21 13:25:33 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/02/21 13:26:05 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,17 @@
 ** Calculates a rotation matrix to transform vector v1 into vector v2.
 */
 
-t_matrix4 vec3_to_rot_matrix(t_vec3 v1, t_vec3 v2)
+t_matrix v_to_rot_matrix(t_vec3 v1, t_vec3 v2)
 {
-    t_vec3      xaxis;
-    t_vec3      yaxis;
-    t_matrix4   m;
+    t_vec3		xaxis;
+    t_vec3		yaxis;
+    t_matrix	m;
     
-	m = new_identity_matrix4();
-	xaxis = vec3_cross_product(v1, v2);
-	xaxis = vec3_normalize(xaxis);
-	yaxis = vec3_cross_product(v2, xaxis);
-	yaxis = vec3_normalize(yaxis);
+	m = m_new();
+	xaxis = v_cross(v1, v2);
+	xaxis = v_norm(xaxis);
+	yaxis = v_cross(v2, xaxis);
+	yaxis = v_norm(yaxis);
 	if (!xaxis.x && !xaxis.y && !xaxis.z &&
 		!yaxis.x && !yaxis.y && !yaxis.z)
 		return (m);

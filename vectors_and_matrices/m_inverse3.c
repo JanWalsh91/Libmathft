@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   matrix4_inverse3.c                                 :+:      :+:    :+:   */
+/*   m_inverse3.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/15 15:32:40 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/15 15:51:07 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/02/21 13:17:12 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/02/21 14:25:54 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libmathft.h"
 
-t_matrix4	matrix4_inverse(t_matrix4 t)
+/*
+** Returns the inverse of a matrix if it exists.
+*/
+
+t_matrix	m_inverse(t_matrix t)
 {
 	int i, j, k; 
-    t_matrix4 s;  
+    t_matrix s;  
  
 	s = new_identity_matrix4();
         // Forward elimination

@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vec3_isnan.c                                       :+:      :+:    :+:   */
+/*   m_add.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/13 14:16:54 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/13 14:23:29 by jwalsh           ###   ########.fr       */
+/*   Created: 2017/02/21 13:19:07 by jwalsh            #+#    #+#             */
+/*   Updated: 2017/02/21 14:22:21 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libmathft.h"
 
 /*
-** Checks if a vector's coordinates are numbers.
-** Returns 1 if all coords are NAN.
+** Adds two matrices together.
 */
 
-int vec3_isnan(t_vec3 v)
-{
-    return (isnan(v.x) && isnan(v.y) && isnan(v.z));
+t_matrix	m_add(t_matrix m1, t_matrix m2)
+{ 
+    int			y;
+    int			x;
+    t_matrix	m;
+
+    m = m_new_identity();
+    y = -1;
+    while (++y < 3)
+    {
+        x = -1;
+        while (++x < 3)
+            m[y][x] = m1[y][x] + m2[y][x];
+    }
+    return (m);
 }
