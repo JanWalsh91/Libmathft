@@ -6,14 +6,11 @@
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/10 13:47:18 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/21 12:02:55 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/02/21 12:04:59 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libmathft.h"
-
-static void	print_vec(t_vec3 vec);
-
 
 /*
 ** Calculates a rotation matrix to transform vector v1 into vector v2.
