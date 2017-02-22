@@ -6,7 +6,7 @@
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/24 15:36:18 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/21 14:25:02 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/02/22 13:57:36 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ t_vec3			v_cross(t_vec3 vec1, t_vec3 vec2);
 double			v_dot(t_vec3 vec1, t_vec3 vec2);
 int				v_isnan(t_vec3 v);
 double			v_length(t_vec3 vec);
+t_vec3			v_clamp(t_vec3 v, double min, double max);
 t_vec3			v_mult(t_vec3 vec, t_vec3 i);
 t_vec3			v_new(double x, double y, double z);
 t_vec3			v_norm(t_vec3 vec);
