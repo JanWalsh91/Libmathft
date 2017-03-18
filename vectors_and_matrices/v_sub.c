@@ -6,14 +6,14 @@
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/21 13:25:19 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/21 14:30:20 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/03/18 16:03:51 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libmathft.h"
 
 /*
-** Subtracts vec2 from vec1. 
+** Subtracts vec2 from vec1.
 */
 
 t_vec3	v_sub(t_vec3 vec1, t_vec3 vec2)

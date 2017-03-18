@@ -6,14 +6,14 @@
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/21 13:23:17 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/21 14:28:08 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/03/18 16:01:53 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libmathft.h"
 
 /*
-** Translates a matrix by vector v.  
+** Translates a matrix by vector v.
 */
 
 t_matrix	m_translate(t_matrix m, t_vec3 v)

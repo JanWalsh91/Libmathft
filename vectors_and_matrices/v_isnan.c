@@ -6,7 +6,7 @@
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/21 13:25:01 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/21 13:25:02 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/03/18 16:03:16 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 ** Returns 1 if all coords are NAN.
 */
 
-int v_isnan(t_vec3 v)
+int	v_isnan(t_vec3 v)
 {
-    return (isnan(v.x) && isnan(v.y) && isnan(v.z));
+	return (isnan(v.x) && isnan(v.y) && isnan(v.z));
 }

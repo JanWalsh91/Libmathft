@@ -6,7 +6,7 @@
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/21 13:25:33 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/21 13:26:05 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/03/18 16:06:23 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 ** Calculates a rotation matrix to transform vector v1 into vector v2.
 */
 
-t_matrix v_to_rot_matrix(t_vec3 v1, t_vec3 v2)
+t_matrix	v_to_rot_matrix(t_vec3 v1, t_vec3 v2)
 {
-    t_vec3		xaxis;
-    t_vec3		yaxis;
-    t_matrix	m;
-    
+	t_vec3		xaxis;
+	t_vec3		yaxis;
+	t_matrix	m;
+
 	m = m_new();
 	xaxis = v_cross(v1, v2);
 	xaxis = v_norm(xaxis);
@@ -39,5 +39,5 @@ t_matrix v_to_rot_matrix(t_vec3 v1, t_vec3 v2)
 	m[2][0] = yaxis.z;
 	m[2][1] = xaxis.z;
 	m[2][2] = v1.z;
-    return (m);
+	return (m);
 }

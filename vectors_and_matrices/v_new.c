@@ -6,12 +6,11 @@
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/21 14:22:58 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/21 14:24:43 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/03/18 16:03:36 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libmathft.h"
-
 
 /*
 ** Creates and returns a new vector with values x, y, and z.

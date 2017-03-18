@@ -6,7 +6,7 @@
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/24 15:36:18 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/22 13:57:36 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/03/18 16:07:04 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,11 +69,11 @@ t_vec3			v_sub(t_vec3 vec1, t_vec3 vec2);
 ** 4 x 4 Matrix functions
 */
 
-t_matrix   		m_add(t_matrix m1, t_matrix m2);
+t_matrix		m_add(t_matrix m1, t_matrix m2);
 t_matrix		m_inverse(t_matrix m);
 t_matrix		m_mult(t_matrix m1, t_matrix m2);
 t_matrix		m_new_identity(void);
-t_matrix  		m_new_rodriguez(t_vec3 a, t_vec3 b);
+t_matrix		m_new_rodriguez(t_vec3 a, t_vec3 b);
 t_matrix		m_new_rotate(float angle, char axis);
 t_matrix		m_new_scale(double i);
 t_matrix		m_new(void);

@@ -6,7 +6,7 @@
 /*   By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/21 13:17:19 by jwalsh            #+#    #+#             */
-/*   Updated: 2017/02/21 13:17:50 by jwalsh           ###   ########.fr       */
+/*   Updated: 2017/03/18 15:58:41 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_matrix	m_mult(t_matrix m1, t_matrix m2)
 	int			y;
 	t_matrix	m;
 
-	m = m_new(); // does this need to be an identity matrix? 
+	m = m_new();
 	y = -1;
 	while (++y < 4)
 	{
