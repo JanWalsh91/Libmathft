@@ -6,7 +6,7 @@
 #    By: jwalsh <jwalsh@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/12 13:07:31 by jwalsh            #+#    #+#              #
-#    Updated: 2017/02/22 13:57:58 by jwalsh           ###   ########.fr        #
+#    Updated: 2017/03/18 16:09:03 by jwalsh           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,6 @@ VECTORS_AND_MATRICES = m_new \
 		m_mult \
 		m_add \
 		m_scale \
-		m_inverse \
 		v_new \
 		v_to_rot_matrix \
 		v_dot \
